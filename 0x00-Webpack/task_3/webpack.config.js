@@ -1,6 +1,12 @@
 const path = require('path');
 
 module.exports = {
+  plugins: [
+		new HTMLWebpackPlugin({
+			filename: './index.html',
+		}),
+		new CleanWebpackPlugin(),
+	],
   entry:  {
 		header: {
 			import: './modules/header/header.js',
